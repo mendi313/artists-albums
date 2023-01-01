@@ -9,7 +9,7 @@ export const getAllAlbums = async () => {
   let albomsByNames = await (await axios.get(secondURLAlboms)).data;
   albomsByNames = albomsByNames.filter((value, index, self) =>
   index === self.findIndex((t) => (
-    t.place === value.place && t.name === value.name
+   t.name === value.name
   ))
 )
   artistsByNames.forEach((artist) => {
